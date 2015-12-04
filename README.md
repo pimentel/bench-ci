@@ -28,6 +28,8 @@ Please make any comments/suggestions for features under the [github issues tab](
 Setup should include an array of benchmarks.
 `bench-ci` should not be involved in actually making the benchmarks.
 Instead, benchmarks should be an external command.
+Configuration should also be available via a online interface.
+`bench-ci` should be configured on a project by project basis, much like travis-ci.
 
 ## execution
 
@@ -38,6 +40,7 @@ Instead, benchmarks should be an external command.
 
 - should be able to keep track of different versions according to SHA1 hash or tag
 - should be able to keep track of different branches
+- should be able to deal with private repositories (API tokens and keys)
 
 ## modeling
 
@@ -45,7 +48,15 @@ Instead, benchmarks should be an external command.
   - especially important to keep track of training, validation, and test datasets
   - several different versions of error
 
-## visualization
+## interface
 
 - there should be a web application that reads data that is stored (technically anywhere) and can make summary reports
 - there should be plotting functionality in order to visualize the performance over time of different metrics
+
+## implementation
+
+- I am currently thinking of doing this as a node package
+
+### useful libraries
+
+- [NodeGit](http://www.nodegit.org/guides/)
